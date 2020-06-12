@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, OnInit } from '@angular/core';
 import Web3 from 'web3';
 import { SessionStorageService } from 'ngx-webstorage';
 
@@ -7,12 +7,15 @@ declare let window: any;
 @Injectable({
   providedIn: 'root'
 })
-export class EthereumService {
+export class EthereumService implements OnInit {
 
   private web3Provider: any;
   private account: any;
 
   constructor(private sessionStorage: SessionStorageService) {
+  }
+
+  ngOnInit() {
     this.loadWeb3();
     this.getAccountInfo();
   }
