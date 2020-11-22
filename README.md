@@ -7,6 +7,9 @@ A starter-kit for deploying smart contracts on Ethereum and devloping DAPPs usin
 # Steps to reproduce
 
 1. Clone the repository
+```console
+foo@bar:~$ git clone https://github.com/rohanp08/starter_kit.git
+```
 2. Start your ethereum network
 3. Update the ethereum network properties in truffle-config.js
 4. Migrate the smart contracts to the ethereum network
