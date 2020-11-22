@@ -8,9 +8,12 @@ A starter-kit for deploying smart contracts on Ethereum and devloping DAPPs usin
 
 1. Clone the repository
 2. Start your ethereum network
-3. Update the ethereum network properties in 
-      truffle-config.js
+3. Update the ethereum network properties in truffle-config.js
 4. Migrate the smart contracts to the ethereum network
-      truffle migrate
+```console
+foo@bar:~$ truffle migrate
+```
 5. Run the client app
-      ng serve -o
+```console
+foo@bar:~$ ng serve -o
+```
