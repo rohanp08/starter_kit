@@ -27,14 +27,15 @@ export class EthereumService implements OnInit {
       this.web3Provider = new Web3.providers.HttpProvider('http://localhost:7545');
     }
     window.web3 = new Web3(this.web3Provider);
+    window.ethereum.enable();
   }
 
   getAccountInfo() {
     const web3 = window.web3;
     web3.eth.getAccounts().then((accounts) => {
+      console.log(accounts);
       this.account = accounts[0];
       this.sessionStorage.store("account", accounts[0]);
-      console.log(accounts[0]);
     });
   }
 }
